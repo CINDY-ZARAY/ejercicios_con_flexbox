@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,600;1,800;1,900&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600,600i,800");
 
 * {
   box-sizing: border-box;
@@ -16,15 +16,18 @@ html {
 
 body {
   min-height: 100%;
-  color: #0f0f0f;
+  color: #333333;
   font: 1.4em/1.8 "EB Garamond", serif;
   margin: 0;
   padding: 0;
 }
 
-@media (max-width: 37.5rem) {
-  body {
-    font-size: 1.2em;
+@media (max-width: 1500px) {
+  .contenedor {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
@@ -33,4 +36,81 @@ h1 {
   font-weight: 600;
   font-style: italic;
   opacity: 0.75;
+}
+
+.contenedor {
+  padding: 4em 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta {
+  max-width: 20em;
+  margin: 1em;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta__imagen {
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(38deg, #3a3738, #1f0568);
+}
+
+.tarjeta__imagen img {
+  object-fit: cover;
+  display: block;
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+
+.tarjeta__contenido {
+  border-radius: 10px;
+  padding: 1em 1em 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta__cabecera {
+  border-bottom: 1px solid rgba(0, 78, 146, 0.2);
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tarjeta__nombre {
+  margin: 0;
+  color: #004e92;
+  font-style: italic;
+}
+
+.tarjeta__fechas {
+  color: gray;
+  font-size: 80%;
+}
+
+.tarjeta__bio {
+  border-radius: 10px;
+  font-size: 0.8em;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.tarjeta__pie {
+  background-color: #004e92;
+  color: white;
+  text-align: center;
+  margin-right: -1em;
+  margin-left: -1em;
+  margin-top: 1em;
+  padding: 0.5em;
+  border-radius: 0 0 10px 10px;
+}
+
+body {
+  background: linear-gradient(50deg, #fcb0cf, #ec8970);
 }
